@@ -1,22 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burhan Rem — Official Support, Community Board & Privacy Policy</title>
+
+    <title>Burhan Rem — Support, Tutorials & Privacy Policy</title>
+
     <style>
         :root {
             --emerald-dark: #064e3b;
             --emerald-mid: #115e59;
             --emerald-light: #0d9488;
             --gold-accent: #f59e0b;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
             --bg-page: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #475569;
         }
-        * { box-sizing: border-box; }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.65;
             color: var(--text-main);
             background: var(--bg-page);
@@ -26,62 +36,62 @@
 
         /* Top Banner */
         .hero {
-            background: radial-gradient(circle at 50% 20%, #115e59 0%, #064e3b 60%, #022c22 100%);
+            background: radial-gradient(
+                circle at 50% 20%,
+                #115e59 0%,
+                #064e3b 60%,
+                #022c22 100%
+            );
             color: #ffffff;
-            padding: 44px 20px 28px 20px;
+            padding: 44px 20px 32px;
             text-align: center;
             border-bottom: 4px solid var(--gold-accent);
         }
-        .hero h1 { margin: 0 0 10px 0; font-size: 2.2rem; letter-spacing: -0.5px; }
-        .hero p { margin: 0 auto; max-width: 640px; color: #ccfbf1; font-size: 1.05rem; }
 
-        /* Interactive Tab Bar */
-        .tab-bar {
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            margin: 0 auto;
+            max-width: 640px;
+            color: #ccfbf1;
+            font-size: 1.05rem;
+        }
+
+        .nav-pills {
             display: flex;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-            margin-top: 28px;
+            margin-top: 24px;
         }
-        .tab-btn {
-            background: rgba(255, 255, 255, 0.12);
+
+        .nav-pills a {
+            background: rgba(255, 255, 255, 0.14);
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            padding: 10px 20px;
+            text-decoration: none;
+            padding: 8px 18px;
             border-radius: 999px;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 600;
-            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.25);
             transition: all 0.2s ease;
-            font-family: inherit;
         }
-        .tab-btn:hover {
-            background: rgba(255, 255, 255, 0.24);
-        }
-        .tab-btn.active {
+
+        .nav-pills a:hover {
             background: var(--gold-accent);
             color: #022c22;
             border-color: var(--gold-accent);
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
-            transform: translateY(-1px);
         }
 
-        /* Main Container & Tab Panels */
+        /* Main Container */
         .container {
-            max-width: 860px;
+            max-width: 840px;
             margin: 32px auto;
             padding: 0 20px;
-        }
-        .tab-panel {
-            display: none;
-            animation: fadeIn 0.25s ease;
-        }
-        .tab-panel.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .card {
@@ -92,6 +102,7 @@
             margin-bottom: 28px;
             border: 1px solid #e2e8f0;
         }
+
         h2 {
             color: var(--emerald-dark);
             border-bottom: 2px solid #ccfbf1;
@@ -99,15 +110,26 @@
             margin-top: 0;
             font-size: 1.45rem;
         }
+
         h3 {
             color: var(--emerald-mid);
             margin-top: 22px;
             margin-bottom: 8px;
             font-size: 1.1rem;
         }
-        p, li { color: var(--text-muted); }
-        ul { padding-left: 22px; }
-        li { margin-bottom: 8px; }
+
+        p,
+        li {
+            color: var(--text-muted);
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
 
         /* Video Container */
         .video-container {
@@ -117,9 +139,10 @@
             overflow: hidden;
             border-radius: 10px;
             background: #0f172a;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
             margin-top: 16px;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -129,43 +152,57 @@
             border: 0;
         }
 
-        /* Notices & Buttons */
-        .board-notice {
-            background: #f0fdf4;
-            border-left: 4px solid #16a34a;
-            padding: 16px 18px;
+        /* WhatsApp & Support Notice */
+        .no-call-alert {
+            background: #fffbeb;
+            border-left: 4px solid var(--gold-accent);
+            color: #92400e;
+            padding: 12px 16px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            font-weight: 600;
+            margin: 14px 0 20px;
             font-size: 0.95rem;
         }
+
         .action-row {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin: 16px 0 24px 0;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--emerald-light);
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.92rem;
-            transition: background 0.2s;
-        }
-        .btn:hover { background: var(--emerald-mid); }
-        .btn-outline {
-            background: #f8fafc;
-            color: var(--emerald-dark);
-            border: 1.5px solid var(--emerald-light);
-        }
-        .btn-outline:hover {
-            background: #ccfbf1;
+            margin-top: 16px;
         }
 
-        .contact-box {
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
+        }
+
+        .btn-email {
+            background: var(--emerald-light);
+            color: #ffffff;
+        }
+
+        .btn-email:hover {
+            background: var(--emerald-mid);
+        }
+
+        .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
@@ -173,165 +210,272 @@
             padding: 20px;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
-            margin-top: 16px;
+            margin-top: 20px;
         }
+
         .footer {
             text-align: center;
             padding: 32px 20px;
             color: #94a3b8;
             font-size: 0.9rem;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .btn {
+                justify-content: center;
+                width: 100%;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- HERO HEADER & TABS -->
+    <!-- HERO HEADER -->
     <header class="hero">
         <h1>Burhan Rem (برهان ريم)</h1>
-        <p>Interactive 15-Line Indo-Pak Quran Hifz Companion — Tutorials, Live Community Board & Privacy Policy</p>
-        
-        <nav class="tab-bar" role="tablist">
-            <button class="tab-btn active" onclick="switchSupportTab('tab-community', this)">💬 Comments & Bug Board</button>
-            <button class="tab-btn" onclick="switchSupportTab('tab-tutorials', this)">🎥 App Tutorials</button>
-            <button class="tab-btn" onclick="switchSupportTab('tab-privacy', this)">🔒 Detailed Privacy Policy</button>
-            <button class="tab-btn" onclick="switchSupportTab('tab-developer', this)">👨‍💻 Developer Contact</button>
+
+        <p>
+            Interactive 15-Line Indo-Pak Quran Hifz Companion —
+            Official Support, Tutorials & Privacy Policy
+        </p>
+
+        <nav class="nav-pills">
+            <a href="#support">💬 Support & Bug Reports</a>
+            <a href="#tutorials">🎥 App Tutorials</a>
+            <a href="#privacy-policy">🔒 Privacy Policy</a>
         </nav>
     </header>
 
     <main class="container">
 
-        <!-- TAB 1: LIVE COMMUNITY & BUG REPORTING BOARD -->
-        <section id="tab-community" class="tab-panel active">
-            <div class="card">
-                <h2>💬 Live Community Comments, Bug Reports & Developer Updates</h2>
-                <div class="board-notice">
-                    <strong>How this works:</strong> Write your bug report, question, or feature request in the comment box below! I actively monitor this board and reply directly underneath your message with status updates and fixes.
-                </div>
-                <p><em>Tip: When reporting a bug, please include your device model (e.g., iPhone 16, iPad Air, Samsung S24) and the Mushaf Page number.</em></p>
+        <!-- SECTION 1: SUPPORT & CONTACT -->
+        <section id="support" class="card">
+            <h2>💬 Customer Support, Bug Reports & Contact</h2>
 
-                <div class="action-row">
-                    <a href="https://github.com/afrxzkhan/test/issues/new" target="_blank" rel="noopener" class="btn">➕ Open a New Bug Ticket Directly</a>
-                    <a href="https://github.com/afrxzkhan/test/issues" target="_blank" rel="noopener" class="btn btn-outline">📋 View All Reported Issues & Status</a>
-                    <a href="mailto:afrozkhan.ak112@gmail.com?subject=Burhan%20Rem%20Support%20Request" class="btn btn-outline">📧 Email Support Privately</a>
+            <p>
+                Encountered a bug, audio issue, or have a question about
+                using <strong>Burhan Rem</strong>? Reach out directly via
+                WhatsApp message or email with a screenshot and your
+                device model.
+            </p>
+
+            <div class="no-call-alert">
+                📵 <strong>Important Note:</strong>
+                Please do not call — just send a message on WhatsApp
+                or Email, and I will reply as soon as possible.
+            </div>
+
+            <div class="action-row">
+
+                <!-- WhatsApp number: country code + number, no plus sign or spaces -->
+                <a
+                    href="https://wa.me/919701043811?text=Assalamu%20Alaikum%2C%20I%20need%20help%20or%20want%20to%20report%20an%20issue%20with%20the%20Burhan%20Rem%20app%3A"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-whatsapp"
+                >
+                    💬 Message on WhatsApp (Text Only)
+                </a>
+
+                <a
+                    href="mailto:afrozkhan.ak112@gmail.com?subject=Burhan%20Rem%20Support%20or%20Bug%20Report"
+                    class="btn btn-email"
+                >
+                    📧 Send Support Email
+                </a>
+
+            </div>
+
+            <div class="contact-grid">
+
+                <div>
+                    <strong>Developer / Publisher:</strong><br>
+                    Afroz Khan
                 </div>
 
-                <!-- LIVE EMBEDDED COMMENT THREAD -->
-                <div id="live-comment-thread">
-                    <script src="https://utteranc.es/client.js"
-                            repo="afrxzkhan/test"
-                            issue-term="pathname"
-                            label="community-comment"
-                            theme="github-light"
-                            crossorigin="anonymous"
-                            async>
-                    </script>
+                <div>
+                    <strong>WhatsApp (Messages Only):</strong><br>
+                    +91 97010 43811<br>
+
+                    <small style="color: #b45309; font-weight: 600;">
+                        (Please do not call, just send message)
+                    </small>
                 </div>
+
+                <div>
+                    <strong>Official Support Email:</strong><br>
+
+                    <a href="mailto:afrozkhan.ak112@gmail.com">
+                        afrozkhan.ak112@gmail.com
+                    </a>
+                </div>
+
+                <div>
+                    <strong>Location:</strong><br>
+                    Hyderabad, Telangana, India
+                </div>
+
             </div>
         </section>
 
-        <!-- TAB 2: VIDEO TUTORIALS -->
-        <section id="tab-tutorials" class="tab-panel">
-            <div class="card">
-                <h2>🎥 Video Tutorials & How to Use Burhan Rem</h2>
-                <p>Watch the step-by-step walkthrough below to learn how to navigate the Journey Map, use the 15-line Indo-Pak Mushaf view, practice active recall with Hold-to-Peek, and complete your daily Spaced Repetition (Sabaq, Sabqi, and Manzil) reviews.</p>
-                
-                <h3>1. Complete Walkthrough: Journey Map, 10 & 10 Routine & SRS Reviews</h3>
-                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your actual YouTube video ID -->
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" title="Burhan Rem App Tutorial" allowfullscreen></iframe>
-                </div>
+        <!-- SECTION 2: VIDEO TUTORIALS -->
+        <section id="tutorials" class="card">
+            <h2>🎥 Video Tutorials: How to Use Burhan Rem</h2>
+
+            <p>
+                Watch this step-by-step walkthrough to learn how to
+                navigate the Journey Map, use the 15-line Indo-Pak
+                Mushaf view, practice active recall with Hold-to-Peek,
+                and complete your daily Spaced Repetition (Sabaq,
+                Sabqi, and Manzil) reviews.
+            </p>
+
+            <!-- Replace with your actual YouTube video ID -->
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID"
+                    title="Burhan Rem App Tutorial"
+                    allowfullscreen
+                ></iframe>
             </div>
         </section>
 
-        <!-- TAB 3: DETAILED PRIVACY POLICY (VISIBLE TO REVIEWERS & USERS) -->
-        <section id="tab-privacy" class="tab-panel" style="display: block;">
-            <div class="card">
-                <h2>🔒 Comprehensive Privacy Policy</h2>
-                <p><strong>Effective Date:</strong> November 14, 2026<br>
+        <!-- SECTION 3: PRIVACY POLICY -->
+        <section id="privacy-policy" class="card">
+            <h2>🔒 Comprehensive Privacy Policy</h2>
+
+            <p>
+                <strong>Effective Date:</strong> November 14, 2026<br>
                 <strong>Last Updated:</strong> November 15, 2026<br>
-                <strong>Application Name:</strong> Burhan Rem: Quran Hifz (iOS & Android)</p>
+                <strong>Application Name:</strong>
+                Burhan Rem: Quran Hifz (iOS & Android)
+            </p>
 
-                <p>At <strong>Burhan Rem</strong> (developed by Afroz Khan), we believe that memorizing and reading the Holy Quran should be a completely private, distraction-free spiritual experience. This Privacy Policy details how information is handled when you install and use the Burhan Rem application.</p>
+            <p>
+                At <strong>Burhan Rem</strong> (developed by Afroz Khan),
+                we believe that memorizing and reading the Holy Quran
+                should be a completely private, distraction-free
+                spiritual experience. This Privacy Policy details how
+                information is handled when you install and use the
+                Burhan Rem application.
+            </p>
 
-                <h3>1. Zero Personal Data Collection (No Account Required)</h3>
-                <p>Burhan Rem does <strong>not</strong> require you to create an account, register an email address, or provide your real name, phone number, location, or any other Personally Identifiable Information (PII) to use the app. We do not maintain external user databases, and we never sell, rent, or monetize user information.</p>
+            <h3>1. Zero Personal Data Collection (No Account Required)</h3>
 
-                <h3>2. Local On-Device Storage Only</h3>
-                <p>All app activity and user preferences are stored strictly <strong>locally on your physical device</strong> using standard local storage (<code>localStorage</code> / Capacitor Preferences). This locally stored data includes:</p>
-                <ul>
-                    <li>Your earned stars, blue diamond mastery badges, and daily login streaks.</li>
-                    <li>Your Spaced Repetition System (SRS) schedules, interval steps (Days 1, 3, 7, 14, 30), and review dates for each Mushaf page.</li>
-                    <li>Your preferred language mode (Arabic, English, Arabic + English, or Urdu), reciter selection, and optional display profile name.</li>
-                </ul>
-                <p>Because this data never leaves your phone or tablet, clearing your app data or uninstalling the application will permanently delete your locally stored progress.</p>
+            <p>
+                Burhan Rem does <strong>not</strong> require you to
+                create an account, register an email address, or provide
+                your real name, phone number, location, or any other
+                Personally Identifiable Information (PII) to use the app.
+                We do not maintain external user databases, and we never
+                sell, rent, or monetize user information.
+            </p>
 
-                <h3>3. Audio Streaming & Network Usage</h3>
-                <p>Burhan Rem bundles the 15-line Indo-Pak Quran text, fonts, and layout coordinates locally inside the app for offline reading. When you play audio recitations or translations that are not cached locally, the application makes standard HTTPS requests to public educational Quranic audio repositories to stream the MP3 files. No personal identifiers, advertising IDs, or tracking cookies are attached to these audio requests.</p>
+            <h3>2. Local On-Device Storage Only</h3>
 
-                <h3>4. No Third-Party Analytics, Trackers, or Advertisements</h3>
-                <ul>
-                    <li><strong>Zero third-party advertisements</strong> (No AdMob or ad networks).</li>
-                    <li><strong>Zero behavioral tracking SDKs</strong> or cross-app tracking.</li>
-                    <li><strong>Zero in-app purchases</strong> or hidden subscriptions.</li>
-                </ul>
+            <p>
+                All app activity and user preferences are stored strictly
+                <strong>locally on your physical device</strong> using
+                standard local storage
+                (<code>localStorage</code> / Capacitor Preferences).
+                This locally stored data includes:
+            </p>
 
-                <h3>5. Children’s Privacy (COPPA & Global Compliance)</h3>
-                <p>Burhan Rem is safe and educational for users of all ages, from young children to elders. We do not knowingly collect personal information from children under the age of 13. If a parent or guardian contacts us via our support channels, any voluntarily shared email correspondence is used solely to resolve the inquiry.</p>
+            <ul>
+                <li>
+                    Your earned stars, blue diamond mastery badges,
+                    and daily login streaks.
+                </li>
 
-                <h3>6. Voluntary Support & Community Board Communications</h3>
-                <p>If you choose to post on our public GitHub-powered Comments & Bug Board or send us a direct support email, your message and username/email address will be visible to the developer solely for troubleshooting, replying with status updates, and improving the application.</p>
-            </div>
-        </section>
+                <li>
+                    Your Spaced Repetition System (SRS) schedules,
+                    interval steps (Days 1, 3, 7, 14, 30), and review
+                    dates for each Mushaf page.
+                </li>
 
-        <!-- TAB 4: DEVELOPER DETAILS -->
-        <section id="tab-developer" class="tab-panel">
-            <div class="card">
-                <h2>👨‍💻 Developer Details & Contact Information</h2>
-                <p>Have questions regarding App Store / Google Play compliance, licensing, or technical support? Reach out directly:</p>
-                <div class="contact-box">
-                    <div>
-                        <strong>Developer / Publisher:</strong><br>
-                        Afroz Khan
-                    </div>
-                    <div>
-                        <strong>Official Support Email:</strong><br>
-                        <a href="mailto:afrozkhan.ak112@gmail.com">afrozkhan.ak112@gmail.com</a>
-                    </div>
-                    <div>
-                        <strong>Location:</strong><br>
-                        Hyderabad, Telangana, India
-                    </div>
-                </div>
-            </div>
+                <li>
+                    Your preferred language mode (Arabic, English,
+                    Arabic + English, or Urdu), reciter selection,
+                    and optional display profile name.
+                </li>
+            </ul>
+
+            <p>
+                Because this data never leaves your phone or tablet,
+                clearing your app data or uninstalling the application
+                will permanently delete your locally stored progress.
+            </p>
+
+            <h3>3. Audio Streaming & Network Usage</h3>
+
+            <p>
+                Burhan Rem bundles the 15-line Indo-Pak Quran text,
+                fonts, and layout coordinates locally inside the app
+                for offline reading. When you play audio recitations or
+                translations that are not cached locally, the application
+                makes standard HTTPS requests to public educational
+                Quranic audio repositories to stream the MP3 files.
+                No personal identifiers, advertising IDs, or tracking
+                cookies are attached to these audio requests.
+            </p>
+
+            <h3>4. No Third-Party Analytics, Trackers, or Advertisements</h3>
+
+            <ul>
+                <li>
+                    <strong>Zero third-party advertisements</strong>
+                    (No AdMob or ad networks).
+                </li>
+
+                <li>
+                    <strong>Zero behavioral tracking SDKs</strong>
+                    or cross-app tracking.
+                </li>
+
+                <li>
+                    <strong>Zero in-app purchases</strong>
+                    or hidden subscriptions.
+                </li>
+            </ul>
+
+            <h3>5. Children’s Privacy (COPPA & Global Compliance)</h3>
+
+            <p>
+                Burhan Rem is safe and educational for users of all ages,
+                from young children to elders. We do not knowingly
+                collect personal information from children under the
+                age of 13. If a parent or guardian contacts us via our
+                support channels, any voluntarily shared correspondence
+                is used solely to resolve the inquiry.
+            </p>
+
+            <h3>6. Voluntary Support Communications</h3>
+
+            <p>
+                If you choose to message us via WhatsApp or email for
+                customer support or bug reporting, your contact details
+                and message history are used strictly to troubleshoot
+                your issue and provide assistance.
+            </p>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        &copy; 2026 Burhan Rem (Afroz Khan). Built with care for the Ummah. All rights reserved.
+        &copy; 2026 Burhan Rem (Afroz Khan).
+        Built with care for the Ummah. All rights reserved.
     </footer>
 
-    <script>
-        function switchSupportTab(tabId, btnElement) {
-            // Hide all panels
-            document.querySelectorAll('.tab-panel').forEach(panel => {
-                panel.classList.remove('active');
-                panel.style.display = 'none';
-            });
-            // Deactivate all tab buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            // Show target panel and highlight clicked button
-            const target = document.getElementById(tabId);
-            if (target) {
-                target.style.display = 'block';
-                target.classList.add('active');
-            }
-            if (btnElement) {
-                btnElement.classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>
