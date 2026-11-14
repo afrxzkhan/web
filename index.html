@@ -3,56 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burhan Rem - Support & Tutorials</title>
+    <title>Burhan Rem — Official Support, Tutorials & Privacy Policy</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1e293b; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f8fafc; }
-        .card { background: #ffffff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 24px; }
-        h1 { color: #064e3b; margin-top: 0; }
-        h2 { color: #115e59; border-bottom: 2px solid #ccfbf1; padding-bottom: 8px; margin-top: 24px; }
-        p, li { color: #475569; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 16px; background: #000; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .btn { display: inline-block; background: #0d9488; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 10px; }
-        .btn:hover { background: #0f766e; }
-        .footer { margin-top: 32px; font-size: 0.9rem; color: #94a3b8; text-align: center; }
+        :root {
+            --emerald-dark: #064e3b;
+            --emerald-mid: #115e59;
+            --emerald-light: #0d9488;
+            --gold-accent: #f59e0b;
+            --bg-page: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-main);
+            background: var(--bg-page);
+            margin: 0;
+            padding: 0;
+        }
+        /* Top Banner */
+        .hero {
+            background: radial-gradient(circle at 50% 20%, #115e59 0%, #064e3b 60%, #022c22 100%);
+            color: #ffffff;
+            padding: 48px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--gold-accent);
+        }
+        .hero h1 { margin: 0 0 10px 0; font-size: 2.2rem; letter-spacing: -0.5px; }
+        .hero p { margin: 0 auto; max-width: 600px; color: #ccfbf1; font-size: 1.05rem; }
+        .nav-pills {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+        .nav-pills a {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.2s ease;
+        }
+        .nav-pills a:hover {
+            background: var(--gold-accent);
+            color: #022c22;
+            border-color: var(--gold-accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 860px;
+            margin: 32px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            margin-bottom: 28px;
+            border: 1px solid #e2e8f0;
+        }
+        h2 {
+            color: var(--emerald-dark);
+            border-bottom: 2px solid #ccfbf1;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.45rem;
+        }
+        h3 {
+            color: var(--emerald-mid);
+            margin-top: 22px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        p, li { color: var(--text-muted); }
+        ul { padding-left: 22px; }
+        li { margin-bottom: 8px; }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #0f172a;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Live Bug Board Notice */
+        .board-notice {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--emerald-light);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .btn:hover { background: var(--emerald-mid); }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-top: 16px;
+        }
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- SECTION 1: TUTORIAL VIDEOS -->
-    <div class="card">
-        <h1>Burhan Rem: App Tutorials</h1>
-        <p>Learn how to navigate the 15-line Mushaf, master the gamified journey map, and use spaced repetition effectively.</p>
-        
-        <h2>How to Use the App</h2>
-        <p>Watch this quick walkthrough video on how to memorize your daily pages and track your streaks:</p>
-        
-        <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your actual YouTube tutorial link ID -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" allowfullscreen></iframe>
-        </div>
-    </div>
+    <!-- HERO HEADER -->
+    <header class="hero">
+        <h1>Burhan Rem (برهان ريم)</h1>
+        <p>Interactive 15-Line Indo-Pak Quran Hifz Companion, Tutorials, Live Issue Tracker & Legal Privacy Portal</p>
+        <nav class="nav-pills">
+            <a href="#tutorials">🎥 App Tutorials</a>
+            <a href="#bug-board">🐞 Live Bug & Feedback Board</a>
+            <a href="#privacy-policy">🔒 Detailed Privacy Policy</a>
+            <a href="#developer">👨‍💻 Developer Contact</a>
+        </nav>
+    </header>
 
-    <!-- SECTION 2: BUG & ISSUE REPORTING -->
-    <div class="card">
-        <h2>Report a Bug or Issue</h2>
-        <p>Encountered a glitch, audio sync issue, or missing translation? Let us know so we can fix it right away.</p>
-        <p>You can report issues directly by sending us an email with your device details and a screenshot:</p>
-        <a href="mailto:support@burhanrem.com?subject=Bug%20Report%20-%20Burhan%20Rem" class="btn">📧 Send Bug Report Email</a>
-    </div>
+    <main class="container">
 
-    <!-- SECTION 3: DEVELOPER DETAILS & PRIVACY -->
-    <div class="card">
-        <h2>Developer Details & Privacy Policy</h2>
-        <p><strong>Developer:</strong> Afroz Khan</p>
-        <p><strong>Contact Email:</strong> <a href="mailto:support@burhanrem.com">support@burhanrem.com</a></p>
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-        <p><strong>Privacy Statement:</strong> All user progress, star ratings, and memorization data are stored locally on your device. We do not track or store personal data on external servers.</p>
-    </div>
+        <!-- SECTION 1: VIDEO TUTORIALS -->
+        <section id="tutorials" class="card">
+            <h2>🎥 Video Tutorials & How to Use Burhan Rem</h2>
+            <p>Welcome to <strong>Burhan Rem</strong>! Watch the walkthrough below to learn how to navigate the Journey Map, use the 15-line Mushaf view, practice active recall with Hold-to-Peek, and complete your daily Spaced Repetition (Sabaq, Sabqi, and Manzil) reviews.</p>
+            
+            <div class="video-grid">
+                <div>
+                    <h3>1. Complete Walkthrough: Journey Map, 10 & 10 Routine & SRS Reviews</h3>
+                    <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with your actual YouTube video ID (e.g., dQw4w9WgXcQ) -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" title="Burhan Rem App Tutorial" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-        &copy; 2026 Burhan Rem. All rights reserved.
-    </div>
+        <!-- SECTION 2: LIVE INTERACTIVE BUG & FEEDBACK BOARD -->
+        <section id="bug-board" class="card">
+            <h2>🐞 Live Bug Reports, Feature Requests & Developer Updates</h2>
+            <div class="board-notice">
+                <strong>💬 Live Interactive Board:</strong> Write your bug report, issue, or feature suggestion directly in the comment box below! I actively monitor this board and will post status updates and fixes directly underneath your message.
+            </div>
+            <p><em>Tip: When reporting a bug, please mention your device model (e.g., iPhone 15, iPad Air, Samsung S23) and the Mushaf Page number if applicable.</em></p>
+
+            <!-- UTTERANCES LIVE COMMENT & REPLY WIDGET -->
+            <!-- IMPORTANT: Ensure repo="afrxzkhan/test" matches your exact GitHub username/repo! -->
+            <script src="https://utteranc.es/client.js"
+                    repo="afrxzkhan/test"
+                    issue-term="pathname"
+                    label="bug-or-feedback"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+
+            <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 28px 0 18px 0;">
+            <p style="font-size: 0.9rem;">Prefer private email instead of the public board? You can also email directly:</p>
+            <a href="mailto:afrozkhan.ak112@gmail.com?subject=Burhan%20Rem%20Support%20Request" class="btn">📧 Send Direct Support Email</a>
+        </section>
+
+        <!-- SECTION 3: DETAILED PRIVACY POLICY -->
+        <section id="privacy-policy" class="card">
+            <h2>🔒 Comprehensive Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> November 14, 2026<br>
+            <strong>Last Updated:</strong> November 15, 2026<br>
+            <strong>Application Name:</strong> Burhan Rem: Quran Hifz (iOS & Android)</p>
+
+            <p>At <strong>Burhan Rem</strong> (developed by Afroz Khan), we believe that memorizing and reading the Holy Quran should be a completely private, distraction-free spiritual experience. This Privacy Policy details exactly how information is handled when you install and use the Burhan Rem mobile application and web application.</p>
+
+            <h3>1. Zero Personal Data Collection (No Account Required)</h3>
+            <p>Burhan Rem does <strong>not</strong> require you to create an account, register an email address, or provide your real name, phone number, location, or any other Personally Identifiable Information (PII) to use the app. We do not maintain external user databases, and we never sell, rent, or monetize user information.</p>
+
+            <h3>2. Local On-Device Storage Only</h3>
+            <p>All app activity and user preferences are stored strictly <strong>locally on your physical device</strong> using standard browser/WebView local storage (<code>localStorage</code> / Capacitor Preferences). This locally stored data includes:</p>
+            <ul>
+                <li>Your earned stars, blue diamond mastery badges, and daily login streaks.</li>
+                <li>Your Spaced Repetition System (SRS) schedules, interval steps (Days 1, 3, 7, 14, 30), and review dates for each Mushaf page.</li>
+                <li>Your preferred language mode (Arabic, English, Arabic + English, or Urdu), reciter selection, and optional display profile name.</li>
+            </ul>
+            <p>Because this data never leaves your phone or tablet, clearing your app data or uninstalling the application will permanently delete your locally stored progress.</p>
+
+            <h3>3. Audio Streaming & Network Usage</h3>
+            <p>Burhan Rem bundles the 15-line Indo-Pak Quran text, fonts, and layout coordinates locally inside the app for offline reading. When you play audio recitations or translations that are not cached locally, the application makes standard HTTPS requests to public educational Quranic audio repositories to stream the MP3 files. No personal identifiers, advertising IDs, or tracking cookies are attached to these audio requests.</p>
+
+            <h3>4. No Third-Party Analytics, Trackers, or Advertisements</h3>
+            <p>Burhan Rem contains:</p>
+            <ul>
+                <li><strong>Zero third-party advertisements</strong> (No AdMob or ad networks).</li>
+                <li><strong>Zero behavioral tracking SDKs</strong> or cross-app tracking.</li>
+                <li><strong>Zero in-app purchases</strong> or hidden subscriptions.</li>
+            </ul>
+
+            <h3>5. Children’s Privacy (COPPA & Global Compliance)</h3>
+            <p>Burhan Rem is designed to be safe and educational for users of all ages, from young children to elders. We do not knowingly collect personal information from children under the age of 13 (or the applicable age of consent in your jurisdiction). If a parent or guardian contacts us via our support channels, any voluntarily shared email correspondence is used solely to resolve the support inquiry.</p>
+
+            <h3>6. Voluntary Support Communications</h3>
+            <p>If you choose to post on our public GitHub-powered Bug & Feedback Board above or send us a direct support email, your message and GitHub username/email address will be visible to the developer solely for troubleshooting, replying with status updates, and improving the application.</p>
+
+            <h3>7. Changes to This Privacy Policy</h3>
+            <p>If we introduce optional cloud backup features in future versions of Burhan Rem, we will update this Privacy Policy prior to rollout and clearly display the updated effective date on this page.</p>
+        </section>
+
+        <!-- SECTION 4: DEVELOPER DETAILS -->
+        <section id="developer" class="card">
+            <h2>👨‍💻 Developer Details & Contact Information</h2>
+            <p>Have questions regarding App Store / Google Play compliance, licensing, or technical support? Reach out directly:</p>
+            <div class="contact-box">
+                <div>
+                    <strong>Developer / Publisher:</strong><br>
+                    Afroz Khan
+                </div>
+                <div>
+                    <strong>Official Support Email:</strong><br>
+                    <a href="mailto:afrozkhan.ak112@gmail.com">afrozkhan.ak112@gmail.com</a>
+                </div>
+                <div>
+                    <strong>Location:</strong><br>
+                    Hyderabad, Telangana, India
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        &copy; 2026 Burhan Rem (Afroz Khan). Built with care for the Ummah. All rights reserved.
+    </footer>
 
 </body>
 </html>
